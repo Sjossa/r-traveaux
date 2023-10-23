@@ -43,7 +43,6 @@
     /* Styles des éléments de la liste de navigation */
     nav ul li {
         display: inline;
-        margin-right: 50px;
         position: relative; /* Position relative pour le sous-menu */
     }
 
@@ -52,32 +51,54 @@
         text-decoration: none;
         color: #fff;
         font-weight: bold;
-        ;
+        margin-right: 50PX;
+    }
+    nav ul li ul.sous-menu li a {
+        text-decoration: none;
+        color: #e5211;
+        font-weight: bold;
+        margin-right: 10px; 
+        top: -2.5vh;
+        position: relative;
     }
 
     /* Styles du sous-menu */
     .sous-menu {
         display: none;
-        position: relative;
+        position: absolute;
+        background-color: #ee2929;
+        border: 1px solid #ccc;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        top:1.9vh;
+        left: 0;
+        
+    }
+
+   
+    /* Affichage du sous-menu au survol de l'élément de navigation parent */
+    nav ul li:hover .sous-menu {
+        display: flex;
+    }
+
+    .sous-sous {
+        display: none;
+        position: absolute;
         background-color: #ee2929;
         border: 1px solid #ccc;
         padding: 10px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         top: 100%; /* Affichage sous le menu parent */
-        left: 0; /* Alignement avec le bord gauche du menu parent */
-        
+        left: 100%; /* Alignement avec le bord gauche du menu parent */
     }
-
-    /* Affichage du sous-menu au survol de l'élément de navigation parent */
-    nav ul li:hover .sous-menu {
+    
+    .sous-menu   :hover .sous-sous {
         display: block;
     }
-
     /* Styles des sections de contenu */
     section {
         padding: 30px;
-        background-color: #fff;
-        margin: 20px;
+        background-color: #de2929;
+        margin: 200px;
         border-radius: 5px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     }
@@ -105,18 +126,4 @@
         text-decoration: underline;
         color: greenyellow;
     }
-}
-.sous-sous {
-    display: none;
-    position: absolute;
-    background-color: #ee2929;
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    top: 100%; /* Affichage sous le menu parent */
-    left: 100%; /* Alignement avec le bord gauche du menu parent */
-}
-
-.sous-menu   :hover .sous-sous {
-    display: block;
 }
