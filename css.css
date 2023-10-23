@@ -1,0 +1,122 @@
+/* Media Query pour les écrans de largeur maximale de 25799 pixels (à revoir) */
+@media screen and (max-width:25799px) {
+    /* Réinitialisation des marges et rembourrages pour les éléments de base */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Styles du corps de la page */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #840707;
+        color: #333;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Styles de l'en-tête (header) */
+    header {
+        background-color: #2e6da4;
+        color: #fff;
+        text-align: center;
+        padding: 22px 0;
+        position: sticky;
+        width: 100%;
+
+    }
+
+    /* Style du titre h1 dans l'en-tête */
+    header h1 {
+        font-size: 36px;
+        margin: 0;
+    }
+    li{top: 2.8vh;}
+    /* Styles de la navigation */
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+;
+    }
+
+    /* Styles des éléments de la liste de navigation */
+    nav ul li {
+        display: inline;
+        margin-right: 50px;
+        position: relative; /* Position relative pour le sous-menu */
+    }
+
+    /* Styles des liens de navigation */
+    nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        ;
+    }
+
+    /* Styles du sous-menu */
+    .sous-menu {
+        display: none;
+        position: relative;
+        background-color: #ee2929;
+        border: 1px solid #ccc;
+        padding: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        top: 100%; /* Affichage sous le menu parent */
+        left: 0; /* Alignement avec le bord gauche du menu parent */
+        
+    }
+
+    /* Affichage du sous-menu au survol de l'élément de navigation parent */
+    nav ul li:hover .sous-menu {
+        display: block;
+    }
+
+    /* Styles des sections de contenu */
+    section {
+        padding: 30px;
+        background-color: #fff;
+        margin: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Styles du footer */
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        background-color: #2e6da4;
+        color: #fff;
+        margin: 0;
+    }
+
+    /* Styles des liens dans le footer */
+    footer a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    /* Style au survol des liens */
+    a:hover {
+        text-decoration: underline;
+        color: greenyellow;
+    }
+}
+.sous-sous {
+    display: none;
+    position: absolute;
+    background-color: #ee2929;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    top: 100%; /* Affichage sous le menu parent */
+    left: 100%; /* Alignement avec le bord gauche du menu parent */
+}
+
+.sous-menu   :hover .sous-sous {
+    display: block;
+}
