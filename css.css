@@ -1,5 +1,5 @@
 /* Media Query pour les écrans de largeur maximale de 25799 pixels (à revoir) */
-@media screen and (max-width:25799px) {
+@media screen and (max-width: 25799px) {
     /* Réinitialisation des marges et rembourrages pour les éléments de base */
     * {
         margin: 0;
@@ -24,7 +24,6 @@
         padding: 22px 0;
         position: sticky;
         width: 100%;
-
     }
 
     /* Style du titre h1 dans l'en-tête */
@@ -32,18 +31,17 @@
         font-size: 36px;
         margin: 0;
     }
-    li{top: 2.8vh;}
+
     /* Styles de la navigation */
-    nav ul {
-        list-style-type: none;
-        padding: 0;
-;
+    li {
+        top: 2.8vh;
     }
 
     /* Styles des éléments de la liste de navigation */
     nav ul li {
         display: inline;
-        position: relative; /* Position relative pour le sous-menu */
+        position: relative;
+        width: 100%; /* Définissez la largeur à 100% pour que les éléments soient empilés verticalement */
     }
 
     /* Styles des liens de navigation */
@@ -51,56 +49,57 @@
         text-decoration: none;
         color: #fff;
         font-weight: bold;
-        margin-right: 50PX;
-    }
-    nav ul li ul.sous-menu li a {
-        text-decoration: none;
-        color: #e5211;
-        font-weight: bold;
-        margin-right: 10px; 
-        top: -2.5vh;
-        position: relative;
+        margin-right: 50px;
     }
 
-    /* Styles du sous-menu */
-    .sous-menu {
-        display: none;
-        position: absolute;
-        background-color: #ee2929;
-        border: 1px solid #ccc;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        top:1.9vh;
-        left: 0;
-        
-    }
 
-   
-    /* Affichage du sous-menu au survol de l'élément de navigation parent */
-    nav ul li:hover .sous-menu {
-        display: flex;
-    }
 
+/* Styles du sous-menu */
+.sous-menu {
+    display: none;
+    position: absolute;
+    top: 1.9vh;
+    left: 0;
+    background-color: #d01717;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+/* Affichage du sous-menu au survol de l'élément de navigation parent */
+nav ul li:hover .sous-menu {
+    display: block;
+}
+
+nav ul li ul.sous-menu li {
+    display: inline; /* Affiche les éléments en ligne */
+    margin-right: 10px; /* Marge entre les éléments */
+}
+
+nav ul li ul.sous-menu li a {
+    text-decoration: none;
+    color: #a28481;
+    padding: 5px; /* Ajout de la marge interne pour l'espacement */
+}
+
+
+  
+
+    /* Styles des sous-sous-menus */
     .sous-sous {
         display: none;
         position: absolute;
-        background-color: #ee2929;
+        background-color: #784b4b;
         border: 1px solid #ccc;
         padding: 10px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         top: 100%; /* Affichage sous le menu parent */
         left: 100%; /* Alignement avec le bord gauche du menu parent */
     }
-    
-    .sous-menu   :hover .sous-sous {
+
+    /* Affichage du sous-sous-menu au survol du sous-menu parent */
+    .sous-menu:hover .sous-sous {
         display: block;
-    }
-    /* Styles des sections de contenu */
-    section {
-        padding: 30px;
-        background-color: #de2929;
-        margin: 200px;
-        border-radius: 5px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     }
 
     /* Styles du footer */
@@ -127,3 +126,4 @@
         color: greenyellow;
     }
 }
+
