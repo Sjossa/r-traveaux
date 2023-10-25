@@ -14,7 +14,7 @@
         line-height: 1.6;
         margin: 0;
         padding: 0;
-    }
+    } 
 
     /* Styles de l'en-tête (header) */
     header {
@@ -50,57 +50,55 @@
         color: #fff;
         font-weight: bold;
         margin-right: 50px;
+        font-size: 2.5vh;
     }
 
 
 
-/* Styles du sous-menu */
-.sous-menu {
-    display: none;
-    position: absolute;
-    top: 1.9vh;
-    left: 0;
-    background-color: #d01717;
-    border: 1px solid #ccc;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-}
-
-/* Affichage du sous-menu au survol de l'élément de navigation parent */
-nav ul li:hover .sous-menu {
+    /* Styles du sous-menu */
+    .sous-menu {
+        display: none;
+        position: absolute;
+        background-color: #d01717;
+        border: 1px solid #ccc;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        top: 130%; /* Pour décaler le sous-menu en dessous du lien de navigation */
+        left: 0;
+        width: auto;
+    }
+  /* Affichage du sous-menu au survol de l'élément de navigation parent */
+  nav ul li:hover .sous-menu {
     display: block;
 }
 
-nav ul li ul.sous-menu li {
-    display: inline; /* Affiche les éléments en ligne */
-    margin-right: 10px; /* Marge entre les éléments */
-}
-
+/* Styles des liens dans le sous-menu */
 nav ul li ul.sous-menu li a {
     text-decoration: none;
-    color: #a28481;
-    padding: 5px; /* Ajout de la marge interne pour l'espacement */
+    color: #f0ecec;
+    margin-right: 10px;
+    top: -2.5vh;
+    position: relative;
+    display: block;
+}
+
+ /* Styles des sous-sous-menus */
+ .sous-sous {
+    display: none;
+    position: absolute;
+    background-color: #784b4b;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    top: 2%;/* Affichage sous le menu parent */
+    left: 100%; /* Alignement avec le bord gauche du menu parent */
+}
+
+/* Affichage du sous-sous-menu au survol du sous-menu parent */
+.sous-menu:hover .sous-sous {
+    display: block;
 }
 
 
-  
-
-    /* Styles des sous-sous-menus */
-    .sous-sous {
-        display: none;
-        position: absolute;
-        background-color: #784b4b;
-        border: 1px solid #ccc;
-        padding: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        top: 100%; /* Affichage sous le menu parent */
-        left: 100%; /* Alignement avec le bord gauche du menu parent */
-    }
-
-    /* Affichage du sous-sous-menu au survol du sous-menu parent */
-    .sous-menu:hover .sous-sous {
-        display: block;
-    }
 
     /* Styles du footer */
     footer {
