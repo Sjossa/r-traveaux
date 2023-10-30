@@ -10,4 +10,8 @@ function openPage(pageName, elmnt, color) {
     elmnt.style.backgroundColor = color;
 }
 
+var editor = ace.edit("editor");
+editor.setTheme("ace/theme/monokai"); // Choisissez un thème
+editor.getSession().setMode("ace/mode/javascript"); // Choisissez un mode
+
 
