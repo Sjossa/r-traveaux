@@ -31,5 +31,6 @@ html,body {
 #Solution {background-color: darkkhaki;}
 #Récompense{ background-color: dimgray;}
 
+#editor{z-index: 5;}
 
 
