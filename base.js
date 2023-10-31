@@ -5,8 +5,12 @@ document.addEventListener("DOMContentLoaded", function() {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', fileToInclude, true);
     xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            elementToInclude.innerHTML = xhr.responseText;
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                elementToInclude.innerHTML = xhr.responseText;
+            } else {
+                console.error("Erreur lors du chargement de " + fileToInclude + " : " + xhr.status + " - " + xhr.statusText);
+            }
         }
     };
     xhr.send();

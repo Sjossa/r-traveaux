@@ -1,9 +1,33 @@
+//idem
+document.addEventListener("DOMContentLoaded", function() {
+    var elementToInclude = document.querySelector('#includedContent');
+    var fileToInclude = 'base_exercise.html';  // Spécifiez le nom du fichier à inclure
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', fileToInclude, true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                elementToInclude.innerHTML = xhr.responseText;
+            } else {
+                console.error("Erreur lors du chargement de " + fileToInclude + " : " + xhr.status + " - " + xhr.statusText);
+            }
+        }
+    };
+    xhr.send();
+});
+
+
+//page
+window.addEventListener('DOMContentLoaded', function () {
+    openPage('Accueil', document.querySelector('.exercise'), 'darkslateblue');
+});
 function openPage(pageName, elmnt, color) {
-    var contenue, exercise;
+    var contenue, exercise ;
     contenue = document.getElementsByClassName("contenue");
     exercise = document.getElementsByClassName("exercise");
     for (var i = 0; i < contenue.length; i++) {
-        contenue[i].style.display = "none";
+        contenue[i].style.display = "";
         exercise[i].style.backgroundColor = "";
     }
     document.getElementById(pageName).style.display = "block";

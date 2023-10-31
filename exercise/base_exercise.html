@@ -4,48 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="exercise.css">
-    <script src="base_exercise.js"></script>
     <script src="https://cdn.jsdelivr.net/requirejs/2.3.6/require.js"></script>
     <script src="https://cdn.jsdelivr.net/monaco-editor/0.24.0/min/vs/loader.js"></script>
-
+    <script src="base_exercise.js"></script>
 
     <title>Document</title>
 </head>
 <body>
-    
     <button class="exercise" onclick="openPage('Accueil', this, 'darkslateblue')">Accueil</button>
     <button class="exercise" onclick="openPage('Exercise', this, 'darkorchid')">Exercise</button>
     <button class="exercise" onclick="openPage('Solution', this, 'darkkhaki')">Solution</button>
     <button class="exercise" onclick="openPage('Récompense', this, 'dimgray')">Récompense</button>
-    
-    <div id="Accueil" class="contenue">
 
+    <div id="Accueil" class="contenue">
         <div class="titre">
             <h1 class="multih1"></h1>
         </div>
-            </div>
-        <div id="Exercise" class="contenue">
-            <h3>Exercise</h3>
-            <div id="editor" style="height: 400px; background-color: aquamarine;">ddddddddddd</div>
-    <button onclick="runCode()">Exécuter</button>
+    </div>
 
-            
-        </div>
+    <div id="Exercise" class="contenue">
+        <h3>Exercise</h3>
+        <div id="editor" style="height: 400px; background-color: aquamarine;"></div>
+        <button onclick="runCode()">Exécuter</button>
+    </div>
 
-        <div id="Solution" class="contenue">
-            <h3>Solution</h3>
-        </div>
+    <div id="Solution" class="contenue">
+        <h3>Solution</h3>
+    </div>
 
-        <div id="Récompense" class="contenue">
-            <h3>Récompense</h3>
-        </div>
+    <div id="Récompense" class="contenue">
+        <h3>Récompense</h3>
+    </div>
 
-
-
-
-
-
-
-    
 </body>
 </html>
