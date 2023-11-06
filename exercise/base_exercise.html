@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="exercise.css">
-    <script src="https://cdn.jsdelivr.net/requirejs/2.3.6/require.js"></script>
-    <script src="https://cdn.jsdelivr.net/monaco-editor/0.24.0/min/vs/loader.js"></script>
-    <script src="base_exercise.js"></script>
+
+       <!-- Copie-page -->
+       <script src="copie-page.js"></script>
+       <script src="page-changeante.js"></script>
+       
+    <!-- CodeMirror -->
+    <link rel="text/css" href="/code-mirror/lib/codemirror.css"> 
+    <script src="/code-mirror/src/codemirror.js" type="module"></script> 
+    <script src="/code-mirror/mode/javascript/javascript.js"></script> 
+    <script src="/code-mirror/mode/htmlmixed/htmlmixed.js"></script> 
+    <script src="/code-mirror/mode/php/php.js"></script> 
+ 
 
     <title>Document</title>
 </head>
 <body>
+    <!---pages dans pages-->
     <button class="exercise" onclick="openPage('Accueil', this, 'darkslateblue')">Accueil</button>
     <button class="exercise" onclick="openPage('Exercise', this, 'darkorchid')">Exercise</button>
     <button class="exercise" onclick="openPage('Solution', this, 'darkkhaki')">Solution</button>
@@ -18,23 +29,30 @@
 
     <div id="Accueil" class="contenue">
         <div class="titre">
-            <h1 class="multih1"></h1>
+            <textarea id="myCode" rows="10" cols="30"></textarea>
+              
+                  <select id="languageSelect" onchange="changeLanguage()">
+                      <option value="javascript">JavaScript</option>
+                      <option value="python">Python</option>
+                      <!-- Ajoutez d'autres langues ici -->
+                  </select>
+              
+                  <button onclick="runCode()">Run Code</button>
+              
+                  <div id="codeOutput"></div>
         </div>
     </div>
 
     <div id="Exercise" class="contenue">
         <h3>Exercise</h3>
-        <div id="editor" style="height: 400px; background-color: aquamarine;"></div>
-        <button onclick="runCode()">Exécuter</button>
     </div>
 
-    <div id="Solution" class="contenue">
+    <div id="Solution" class "contenue">
         <h3>Solution</h3>
     </div>
 
     <div id="Récompense" class="contenue">
         <h3>Récompense</h3>
     </div>
-
 </body>
 </html>
